@@ -1,0 +1,216 @@
+body {
+  background-color: #6342ff;
+  text-align: center;
+  font-family: "Futura";
+}
+
+h1 {
+  color: #1AEFC0;
+  font-family: "Merriweather Sans";
+  font-size: 3rem;
+  text-decoration: underline;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 3%;
+}
+
+html {
+  /* font-size: 62.5%; */
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.howWide {
+  width: 35%;
+  margin: 0 auto;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  background-color: #f1f1f1;
+  padding: 2px 0;
+  margin: 30px auto 20px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  font-size: 1.5rem;
+  font-weight: 500;
+  float: center;
+  width: 20%;
+  margin: 0;
+  border: 1px solid transparent;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #3E1;
+  border-radius: 10%;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #3E1;
+  border: 1px solid;
+  border-radius: 10%;
+}
+
+.calculator {
+  border: 1px solid #ccc;
+  border-radius: 1%;
+  display: inline-block;
+  margin: 2% 0;
+  padding-top: 1%;
+}
+
+.exercise {
+  margin: 2% 0% 0%;
+  font-size: 4vw;
+}
+
+.exercise-numbers {
+  display: inline-block;
+  /* border-radius: 5%; */
+  width: 40%;
+  border: none;
+  background-color: #ffe942;
+  color: #280bb3;
+}
+
+.text-right {
+  padding-right: 3%;
+}
+
+.exercise-equal {
+  display: inline-block;
+  width: 15%;
+  background-color: #c2b342;
+}
+
+#exercise-outcome {
+  display: inline-block;
+  width: 25%;
+  font-style: italic;
+  color: grey;
+  border: solid 3px black;
+}
+
+button {
+  font-size: 2rem;
+  margin: 3%;
+}
+
+.btn-sm {
+  font-size: 1.5rem;
+}
+
+.fas {
+  font-size: 100%;
+}
+
+.check-answer {
+  font-size: 2rem;
+  height: 97.6%;
+  grid-area: 1 / 4 / 6 / 5;
+}
+
+.number-pad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-gap: 20px; */
+  padding: 20px;
+}
+
+.round-up {
+  background-color: #f1f1f1;
+  margin-bottom: 20px;
+}
+
+.rightAnswerClass {
+  background-color: green;
+}
+
+.tryAgainClass {
+  color: red;
+}
+
+.wrongAnswerClass {
+  background-color: pink;
+}
+
+/* After right answer buttons don't work */
+.disableClass {}
+
+.score {
+  background-color: #fff567;
+  width: 60%;
+  display: inline-block;
+  border: solid black 3px;
+  border-radius: 50px;
+  vertical-align: left;
+  font-size: 3rem;
+  margin: 3% 3%;
+  font-weight: 600;
+}
+
+.timer {
+  width: 20%;
+  display: inline-block;
+  border: solid red 5px;
+  border-radius: 50%;
+  vertical-align: right;
+  font-size: 2.5rem;
+  /* font-weight: 600; */
+}
+
+.scorebox {
+  display: inline-block;
+  width: 30%;
+  margin: 0 5%;
+}
+
+.last-score, .high-score {
+  background-color: #fff567;
+  width: 100%;
+  display: inline-block;
+  border: solid black 3px;
+  border-radius: 50px;
+  vertical-align: right;
+  font-size: 3rem;
+  margin: 3% 3%;
+  font-weight: 600;
+}
+
+@media (max-width: 828px) {
+  .howWide {
+    width: 50%;
+  }
+
+  .exercise {
+    font-size: 6vw;
+  }
+}
+
+@media (max-width: 570px) {
+  .howWide {
+    width: 80%;
+  }
+
+  .exercise {
+    font-size: 9vw;
+  }
+}

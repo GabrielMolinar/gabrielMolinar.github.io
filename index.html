@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Getallen Raket</title>
+  <!-- CSS stylesheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="icon" href="favicon/favicon.ico"> -->
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Futura&family=Merriweather+Sans:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4dd3a3017c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <h1>Reken op jezelf!</h1>
+
+
+  <div class="tab howWide">
+    <button class="tablinks" onclick="chooseOperator(event, add)">+</button>
+    <button class="tablinks" onclick="chooseOperator(event, subtract)">-</button>
+    <button class="tablinks" onclick="chooseOperator(event, multiply)">x</button>
+    <button class="tablinks" onclick="chooseOperator(event, divide)">:</button>
+  </div>
+
+
+  <div class="calculator card howWide">
+    <div class="exercise">
+      <div class="exercise-numbers text-right">
+        15 - 9
+      </div>
+      <div class="exercise-equal">
+        =
+      </div>
+      <div id="exercise-outcome" class="text-right">
+        0
+      </div>
+    </div>
+
+    <div class="number-pad">
+
+      <button type="button" onclick="addNumber(event)" class="btn btn-outline-success waves-effect disableClass">7</button>
+      <button type="button" onclick="addNumber(event)" class="btn btn-outline-success waves-effect disableClass">8</button>
+      <button type="button" onclick="addNumber(event)" class="btn btn-outline-success waves-effect disableClass">9</button>
+      <button type="button" onclick="addNumber(event)" class="btn btn-outline-success waves-effect disableClass">4</button>
+      <button type="button" onclick="addNumber(event)" class="btn btn-outline-success waves-effect disableClass">5</button>
+      <button type="button" onclick="addNumber(event)" class="btn btn-outline-success waves-effect disableClass">6</button>
+      <button type="button" onclick="addNumber(event)" class="btn btn-outline-success waves-effect disableClass">1</button>
+      <button type="button" onclick="addNumber(event)" class="btn btn-outline-success waves-effect disableClass">2</button>
+      <button type="button" onclick="addNumber(event)" class="btn btn-outline-success waves-effect disableClass">3</button>
+      <button type="button" onclick="clearAll()" class="btn btn-danger btn-sm disableClass">AC</button>
+      <button type="button" onclick="addNumber(event)" class="btn btn-outline-success waves-effect disableClass">0</button>
+      <button type="button" onclick="deleteLastDigit()" class="btn btn-secondary disableClass"><i class="fas fa-backspace"></i></button>
+
+      <button type="button" class="check-answer btn btn-primary" onclick="checkAnswer()">=</button>
+    </div>
+  </div>
+
+  <div class="round-up text-center howWide">
+    <div class="score">
+      0
+    </div>
+    <button type="button" onclick="runTimer()" class="timer">
+      <i class='fas fa-hourglass-half'></i>
+    </button>
+  </div>
+
+  <div class="round-up text-center howWide">
+    <div class="scorebox text-center">
+      <div class="">
+        Last score:
+      </div>
+      <div class="last-score">
+        0
+      </div>
+    </div>
+    <div class="scorebox text-center">
+      <div class="">
+        High score:
+      </div>
+      <div class="high-score">
+        0
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

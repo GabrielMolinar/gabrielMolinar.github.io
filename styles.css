@@ -195,7 +195,7 @@ button {
   font-weight: 600;
 }
 
-@media and (max-width: 828px) {
+@media screen only and (max-width: 828px) {
   .howWide {
     width: 50%;
   }
@@ -205,7 +205,7 @@ button {
   }
 }
 
-@media and (max-width: 570px) {
+@media screen only and (max-width: 570px) {
   .howWide {
     width: 80%;
   }

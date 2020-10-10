@@ -37,7 +37,9 @@ function createExercise(num1, num2, operator) {
   return calculate;
 }
 
-createExercise(randomNumber1, randomNumber2, operator); // to generate first exercise
+// to generate first exercise
+clearAll();
+createExercise(randomNumber1, randomNumber2, operator);
 // right answer: createExercise(randomNumber1, randomNumber2, operator).toString(10);
 
 
@@ -145,9 +147,8 @@ function checkAnswer() {
       again();
     }
   } else if (tries < maxTries) {
-    document.getElementById("exercise-outcome").classList.add("tryAgainClass");
+    document.querySelector("#exercise-outcome").style.color = "red";
   } else if (tries === maxTries) {
-    document.getElementById("exercise-outcome").classList.remove("tryAgainClass");
     document.getElementById("exercise-outcome").classList.add("wrongAnswerClass");
     document.querySelector("#exercise-outcome").innerHTML = rightAnswer;
     nextExercise();

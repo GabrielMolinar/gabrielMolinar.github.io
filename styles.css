@@ -105,7 +105,6 @@ html {
   display: inline-block;
   width: 25%;
   font-style: italic;
-  color: grey;
   border: solid 3px black;
 }
 
@@ -142,10 +141,6 @@ button {
 
 .rightAnswerClass {
   background-color: green;
-}
-
-.tryAgainClass {
-  color: red;
 }
 
 .wrongAnswerClass {

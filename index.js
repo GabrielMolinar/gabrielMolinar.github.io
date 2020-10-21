@@ -50,7 +50,7 @@ function addNumber(event) { // Button numbers
 }
 
 function clickInAnswer (number) {
-  document.querySelector("#exercise-outcome").style.color = "black";
+  document.querySelector("#exercise-outcome").classList.add("blackText");
   var currentAnswer = document.querySelector("#exercise-outcome").innerHTML;
   if (currentAnswer == 0) {
     currentAnswer = number;
@@ -61,8 +61,12 @@ function clickInAnswer (number) {
 }
 
 function clearAll () { // Button AC
-  document.querySelector("#exercise-outcome").innerHTML = "0";
-  document.querySelector("#exercise-outcome").style.color = "grey";
+  document.getElementById("exercise-outcome").classList.remove("blackText");
+  document.getElementById("exercise-outcome").classList.remove("rightAnswerClass");
+  document.getElementById("exercise-outcome").classList.remove("tryAgainClass");
+  document.getElementById("exercise-outcome").classList.remove("wrongAnswerClass");
+  document.getElementById("exercise-outcome").classList.add("clearClass");
+  document.getElementById("exercise-outcome").innerHTML = 0;
   return "0";
 }
 
@@ -147,7 +151,8 @@ function checkAnswer() {
       again();
     }
   } else if (tries < maxTries) {
-    document.querySelector("#exercise-outcome").style.color = "red";
+    document.getElementById("exercise-outcome").classList.remove("blackText");
+    document.getElementById("exercise-outcome").classList.add("tryAgainClass");
   } else if (tries === maxTries) {
     document.getElementById("exercise-outcome").classList.add("wrongAnswerClass");
     document.querySelector("#exercise-outcome").innerHTML = rightAnswer;
@@ -174,8 +179,6 @@ function nextExercise () {
 }
 
 function again() { // reset to start the next exercise
-  document.getElementById("exercise-outcome").classList.remove("rightAnswerClass");
-  document.getElementById("exercise-outcome").classList.remove("wrongAnswerClass");
   tries = 0;
   clearAll();
   randomNumber1 = Math.floor( Math.random()*10);

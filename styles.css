@@ -1,11 +1,11 @@
 body {
-  background-color: #6342ff;
+  background-color: #DECF66; /* #6342ff; */
   text-align: center;
   font-family: "Futura";
 }
 
 h1 {
-  color: #1AEFC0;
+  color: #280bb3;
   font-family: "Merriweather Sans";
   font-size: 3rem;
   text-decoration: underline;
@@ -29,6 +29,7 @@ html {
 
 .howWide {
   width: 35%;
+  background-color: #FCFAE8;
   margin: 0 auto;
 }
 
@@ -46,7 +47,7 @@ html {
 .tab button {
   background-color: inherit;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: bold;
   float: center;
   width: 20%;
   margin: 0;
@@ -58,14 +59,14 @@ html {
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #3E1;
+  background-color: #ffe942;
   border-radius: 10%;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #3E1;
-  border: 1px solid;
+  background-color: #ffe942;
+  border: 1px solid #280bb3;
   border-radius: 10%;
 }
 
@@ -98,7 +99,7 @@ html {
 .exercise-equal {
   display: inline-block;
   width: 15%;
-  background-color: #c2b342;
+  background-color: #68F054;
 }
 
 #exercise-outcome {
@@ -135,23 +136,37 @@ button {
 }
 
 .round-up {
-  background-color: #f1f1f1;
+  /* background-color: #f1f1f1; */
   margin-bottom: 20px;
 }
 
+.clearClass {
+  color: grey;
+}
+
+.blackText {
+  color: black;
+}
+
 .rightAnswerClass {
-  background-color: green;
+  background-color: #FAF657;
+}
+
+.tryAgainClass {
+  background-color: #FFC9D1;
+  color: #E34447;
 }
 
 .wrongAnswerClass {
-  background-color: pink;
+  background-color: #FFBDCD;
+  color: black;
 }
 
 /* After right answer buttons don't work */
 .disableClass {}
 
 .score {
-  background-color: #fff567;
+  background-color: #ffe942;
   width: 60%;
   display: inline-block;
   border: solid black 3px;
@@ -179,7 +194,7 @@ button {
 }
 
 .last-score, .high-score {
-  background-color: #fff567;
+  background-color: #ffe942;
   width: 100%;
   display: inline-block;
   border: solid black 3px;
